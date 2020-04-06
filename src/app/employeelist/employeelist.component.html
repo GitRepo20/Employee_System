@@ -1,0 +1,21 @@
+<h1>Employee List</h1>
+
+
+<table>
+<tr>
+	<th>Id</th>
+	<th>First Name</th>
+	<th>Age</th>
+	<th>Salary</th>
+</tr>
+<tr *ngFor="let item of EmployeeArray">
+		<td>{{item.id}}</td>
+		<td>{{item.employee_name}}</td>
+		<td>{{item.employee_age}}</td>
+		<td>{{item.employee_salary}}</td>
+		<td><button (click)="getEmployee(item.id,1)">View</button></td>	
+		<td><button (click)="getEmployee(item.id,2)">Update</button></td>	
+		<td><button (click)="deleteEmployee(item.id)">Delete</button></td>			
+</tr>
+</table>
+
